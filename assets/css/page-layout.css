@@ -1,0 +1,26 @@
+body {
+  background-color: #f2f4f6 !important;
+}
+
+.tab{
+  background-color: #ffffff !important;
+}
+
+.navbar{
+  background-color: #22272E !important;
+}
+
+.fixed-nav-bar {
+  position: fixed !important;
+  top: 0px !important;
+  z-index: 999 !important;
+  width: 100vw !important;
+}
+
+.search-box {
+  width: 80% !important;
+  border: 1px solid #000000 !important;
+  background-color: #000000 !important;
+  background: #000000;
+  color: #f2f4f6;
+}

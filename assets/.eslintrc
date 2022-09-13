@@ -1,0 +1,161 @@
+{
+  "env": {
+    "commonjs": false,
+    "es6": true,
+    "browser": true
+  },
+  "plugins": ["babel", "react", "import", "filenames", "flowtype", "promise"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:flowtype/recommended",
+    "plugin:react/recommended",
+    "airbnb",
+    "prettier"
+  ],
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "experimentalObjectRestSpread": true,
+      "jsx": true
+    },
+    "sourceType": "module"
+  },
+  "settings": {
+    // "react": {
+    //   "version": "15.6.2"
+    // },
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx"]
+      }
+    }
+  },
+  "root": true,
+  "rules": {
+    "radix": ["error", "as-needed"],
+    "no-loop-func": "warn",
+    "comma-dangle":"off",
+    "func-names": "off",
+    "camelcase": "warn",
+    "filenames/match-exported": ["error", [null, "kebab", "pascal"]],
+    "filenames/match-regex": [
+      2,
+      "^([A-Za-z0-9-]+|webpack.config.([a-z.]*))$",
+      true
+    ],
+    "filenames/no-index": 0,
+    "import/named": 0,
+    "import/no-commonjs": "error",
+    "import/no-extraneous-dependencies": 0,
+    "import/no-mutable-exports": 0,
+    "import/no-unresolved": ["error", {"caseSensitive": false}],
+    "import/order": 0,
+    "import/prefer-default-export": 0,
+    "indent": ["error", 2, {"SwitchCase": 1}],
+    "jsx-a11y/anchor-is-valid": 0,
+    "linebreak-style": ["error", "unix"],
+    "lines-between-class-members": ["error", "always"],
+    "no-console": 0,
+    "no-debugger": 0,
+    "no-else-return": "error",
+    "no-empty": ["warn", {"allowEmptyCatch": true}],
+    "no-extra-bind": "error",
+    "no-extra-parens": "off",
+    "no-global-assign": ["error"],
+    "no-irregular-whitespace": [
+      "error",
+      {"skipStrings": true, "skipTemplates": true, "skipComments": true}
+    ],
+    "no-process-env": 0,
+    "no-unused-vars": [
+      "warn",
+      {
+        "args": "after-used",
+        "varsIgnorePattern": "PropTypes",
+        "ignoreRestSiblings": true
+      }
+    ],
+    "no-use-before-define": ["error", {"functions": false}],
+    "no-useless-concat": "error",
+    "no-var": ["error"],
+    "object-curly-newline": [
+      "error",
+      {
+        "ObjectExpression": {"multiline": true, "consistent": true},
+        "ObjectPattern": {"multiline": true, "consistent": true},
+        "ImportDeclaration": "never",
+        "ExportDeclaration": {"multiline": true, "consistent": true}
+      }
+    ],
+    "eqeqeq": "warn",
+    "no-unused-expressions": "warn",
+    "flowtype/no-types-missing-file-annotation": "warn",
+    "one-var": ["error", "never"],
+    "global-require": "warn",
+    "import/no-dynamic-require": 0,
+    "padding-line-between-statements": [
+      "error",
+      {"blankLine": "always", "prev": "import", "next": "*"},
+      {"blankLine": "never", "prev": "import", "next": "import"}
+    ],
+    "consistent-return": "off",
+    "arrow-body-style":"off",
+    "no-param-reassign": 0,
+    "default-case": "warn",
+    "no-confusing-arrow": "warn",
+    "class-methods-use-this": "off",
+    "no-mixed-operators": "warn",
+    "no-restricted-globals": "warn",
+    "prefer-const": "error",
+    "prefer-destructuring": "off",
+    "prefer-rest-params": "error",
+    "prefer-arrow-callback":"off",
+    "prefer-spread": "error",
+    "prefer-template": "error",
+    "promise/always-return": "error",
+    "quotes": ["error", "single", {"avoidEscape": true}],
+    "react/default-props-match-prop-types": "warn",
+    "react/destructuring-assignment": 0,
+    "react/display-name": [0, {"ignoreTranspilerName": false}],
+    "react/forbid-prop-types": "warn",
+    "react/jsx-curly-brace-presence": [
+      "warn",
+      {"props": "always", "children": "ignore"}
+    ],
+    "react/jsx-indent": 0,
+    "react/jsx-no-bind": "off",
+    "react/jsx-one-expression-per-line": 0,
+    "react/jsx-wrap-multilines": 0,
+    "react/no-access-state-in-setstate": "warn",
+    "react/no-array-index-key": 0,
+    "react/no-unused-prop-types": "warn",
+    "react/no-unused-state": "warn",
+    "react/prop-types": ["warn", {"skipUndeclared": true}],
+    "react/require-default-props": "warn",
+    "react/sort-comp": [
+      "warn",
+      {
+        "order": [
+          "type-annotations",
+          "static-methods",
+          "lifecycle",
+          "everything-else",
+          "render"
+        ]
+      }
+    ],
+    "require-jsdoc": 0,
+    "semi": ["warn", "always"],
+    "space-before-function-paren": ["error", {
+      "named": "never",
+      "asyncArrow": "always",
+    }],
+    "no-return-assign": "off",
+    "dot-notation": "off"
+  },
+  "globals": {
+    "$": true
+  }
+}

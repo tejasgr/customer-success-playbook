@@ -1,0 +1,29 @@
+{
+  "ignore": ["node_modules"],
+  "presets": [
+    ["env", {"targets": {"node": 8}, "useBuiltIns": true}], "flow", "react"
+  ],
+  "plugins": [
+      "dynamic-import-node",
+      "add-module-exports",
+      "transform-object-rest-spread",
+      "transform-decorators-legacy",
+      "transform-class-properties"
+  ],
+  "env": {
+      "development": {
+        "plugins": [["flow-runtime", {"assert": false, "annotate": true}], "transform-react-jsx-self"]
+      },
+  
+      "production": {
+        "plugins": [
+          "minify-constant-folding",
+          "minify-guarded-expressions",
+          "minify-dead-code-elimination",
+          ["transform-react-remove-prop-types", {"removeImport": true}]
+        ],
+
+        "presets": ["react-optimize"]
+      }
+    }
+}
