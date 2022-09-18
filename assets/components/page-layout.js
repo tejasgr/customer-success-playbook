@@ -4,6 +4,7 @@ import {
   VerticalSeparator, Tabs, MenuIcon, InputSearch, Title, AlertIcon, Loader
 } from 'prism-reactjs';
 import '../css/page-layout.css';
+import DecisionTree from './decision-tree/DecisionTree';
 
 export default class AppPageLayout extends React.Component {
 
@@ -27,6 +28,9 @@ export default class AppPageLayout extends React.Component {
               <SettingsIcon />
             </div>
           </div>
+        </div>
+        <div>
+          <DecisionTree />
         </div>
       </div>
     )
